@@ -1,0 +1,892 @@
+body {
+    background: #F5F5F5;
+    overflow: hidden;
+}
+
+.d-none {
+    display: none;
+}
+
+.closeOverlayWhite {
+    display: none;
+}
+
+.contactBody {
+    position: absolute;
+    top: 93px;
+    overflow: hidden;
+    right: 0;
+    left: 258px;
+    bottom: 0;
+}
+
+
+
+/***************************************************/
+/*********         ContactSide          ************/
+/***************************************************/
+
+.contactList {
+    /* joshua tryout: */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    position: absolute;
+    width: 30%;
+    left: 1%;
+    height: 100%;
+    background: #FFFFFF;
+    box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.08);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.contactListSide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    width: 90%;
+    top: 2px;
+    background: #FFFFFF;
+}
+
+.alpphabetSorting {
+    border-bottom: 1.5px solid rgba(128, 128, 128, 0.38);
+    width: 100%;
+    height: 40px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    flex: none;
+    margin-top: 16px;
+    padding-bottom: 16px;
+}
+
+
+.dividingBar {
+    display: none;
+    width: 80%;
+    height: 0px;
+    border: 1px solid #D1D1D1;
+    border-radius: 3px;
+    flex: none;
+}
+
+.contact {
+    padding: 10px;
+    width: 90%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    /* flex-direction: row; */
+    gap: 20px;
+    /* margin-right: 28px; */
+    /* height: 79px; */
+    background: #FFFFFF;
+    border-radius: 10px;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.picImg {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 100%;
+    border: 1px solid #FFFFFF;
+    margin-left: 0px;
+    flex-shrink: 0;
+}
+
+.dataInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 5px;
+    width: 156px;
+    height: 49px;
+    flex: none;
+}
+
+.dataName {
+    width: 150px;
+    height: 25px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.dataMail {
+    width: 140px;
+    height: 19px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #007CEE;
+}
+
+.selected {
+    background-color: #293647;
+    /* margin-left: 20%;
+    margin-right: 5%;
+    margin-top: 5%; */
+
+
+}
+
+.selected .dataName {
+    color: white;
+}
+
+.selected .picImg {
+    color: white;
+}
+
+/***************************************************/
+/*********       ContactInfoOverlay     ************/
+/***************************************************/
+
+.contactMenu {
+    display: flex;
+    position: absolute;
+    right: 54%;
+    top: 0%;
+}
+
+.picAndData {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 54px;
+    width: 461px;
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    animation: slideInFromRight 1s ease-in-out;
+    z-index: 1;
+}
+
+.editContactMobile {
+    display: none;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(220%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.picAndData.slide-out {
+    animation: slideOutToLeft 2s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideOutToLeft {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(+220%);
+    }
+}
+
+.contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 21px;
+    position: relative;
+    width: 461px;
+    height: 364px;
+    top: 300px;
+    left: 773px;
+}
+
+.contactImg1 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 0px;
+    top: 0px;
+    background: #FF7A00;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+}
+
+.contactData1 {
+    width: 350px;
+    height: 56px;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.addTask1 {
+    width: 100px;
+    height: 19px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #29ABE2;
+    position: absolute;
+    top: 100px;
+    right: 165px;
+    cursor: pointer;
+}
+
+.contactContainer1 {
+    width: 287px;
+    height: 56px;
+    font-weight: 500;
+    font-size: 47px;
+    line-height: 120%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+    margin-left: 200px;
+}
+
+.infoContakt1 {
+    width: 207px;
+    height: 74px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+
+}
+
+.contactInformation1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 59px;
+    width: 392.85px;
+    height: 74px;
+    position: absolute;
+    top: 135px;
+}
+
+
+.editConact1 {
+    font-weight: 400;
+    white-space: nowrap;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #2A3647;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.editConact1:hover {
+    background-color: #cdcdcd;
+    scale: 1.05;
+}
+
+
+.editConact1 img {
+    margin-right: 10px;
+    height: 20px;
+}
+
+.mailText {
+    width: 43px;
+    height: 19px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    padding-bottom: 15px;
+}
+
+.mail1 {
+    width: 140px;
+    height: 19px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #007CEE;
+}
+
+.emailPhoneContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 22px;
+    width: 140px;
+    height: 128px;
+    position: absolute;
+    top: 220px;
+}
+
+.phone1 {
+    width: 50px;
+    height: 19px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    padding-bottom: 15px;
+}
+
+.phoneText1 {
+    width: 124px;
+    height: 19px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+.contactDeleat {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.contactDeleat:hover {
+    background-color: #cdcdcd;
+    scale: 1.05;
+}
+
+
+.contactDeleat img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+/***************************************************/
+/*********        ContactRightSide      ************/
+/***************************************************/
+
+.contactRightSide {
+    width: 100%;
+    height: 100%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 120%;
+    color: #000000;
+    position: relative;
+    left: 31%;
+    display: flex;
+    flex-direction: row;
+}
+
+.firstTextRightSide {
+    display: flex;
+    font-size: 51px;
+}
+
+.newContact {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 10px;
+    gap: 10px;
+    position: absolute;
+    width: 193px;
+    height: 53px;
+    background: #2A3647;
+    border-radius: 10px;
+    right: 40%;
+    bottom: 10%;
+}
+
+.iconAdd {
+    height: 22px;
+}
+
+.newContact:hover {
+    background-color: #29ABE2;
+
+}
+
+.containerRightSide {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    height: 73px;
+    top: 25px;
+    left: 100px;
+}
+
+.texttemplatesKanban {
+    position: absolute;
+    top: 0%;
+    font-size: 60%;
+    left: 0%;
+    display: none;
+}
+
+.textRightSide {
+    font-weight: 400;
+    font-size: 20px;
+    color: #2A3647;
+    flex: none;
+    order: 2;
+}
+
+.textNewContact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balken {
+    width: 0px;
+    height: 59px;
+    border: 1.5px solid #29ABE2;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+/***************************************************/
+/*********        OverlayAddContact     ************/
+/***************************************************/
+
+.popUpContainer {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.overlayAddContact {
+    position: relative;
+    top: calc(50% -250px);
+    max-width: 1000px;
+    height: 500px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    transform: translateX(220%);
+    transition: transform 1s;
+    left: 6%;
+    z-index: 7;
+}
+
+.overlayAddContact.show {
+    transform: translateX(0);
+}
+
+.autoLayout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    isolation: isolate;
+    position: absolute;
+    width: 340px;
+    height: 500px;
+    left: 0px;
+    top: 0px;
+    background: #2A3647;
+    border-radius: 30px 0px 0 30px;
+}
+
+
+.containerOverRightSide {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 65%;
+    height: 500px;
+    position: relative;
+    right: -35%;
+}
+
+.logoOverlay {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 110%;
+    top: 50%;
+    transform: translate(0, -50%);
+    background: #D1D1D1;
+    box-shadow: 9px 12px 17px rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+    border: 2px solid white;
+    margin: 0;
+    box-shadow: 8px 9px 12px rgba(0, 0, 0, 0.1);
+}
+
+.addLogo {
+    z-index: 3;
+    height: 50px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.create-contact img {
+    height: 12px;
+}
+
+.create-contact {
+    gap: 7px;
+}
+
+.cancel img {
+    height: 25px;
+}
+
+.cancel {
+    display: block;
+}
+
+.overlayTextAdd {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 120%;
+    color: #FFFFFF;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.overlayText2Add {
+    width: 75%;
+    font-weight: 300;
+    font-size: 16px;
+    color: #FFFFFF;
+    z-index: 1;
+    margin-left: 40px;
+    padding-bottom: 10px;
+}
+
+.closeOverlay {
+    position: relative;
+    right: -90%;
+    top: 4%;
+}
+
+.logoOverlay img {
+    height: 50px;
+}
+
+.overlayborderAdd {
+    width: 0px;
+    height: 90px;
+    border: 1.5px solid #29ABE2;
+    transform: rotate(90deg);
+    z-index: 2;
+    margin-left: 90px;
+    margin-top: -50px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    width: 65%;
+    height: 271px;
+    top: 100px;
+    right: 7%;
+}
+
+.overlayInput {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 13px 21px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#nameAdd {
+    background: url(/img/VectorinputName.png) no-repeat;
+    background-position: 97%;
+}
+
+#emailAdd {
+    background: url(/img/VectorinputMail.png) no-repeat;
+    background-position: 97%;
+}
+
+#telAdd {
+    background: url(/img/VectorinputPhone.png) no-repeat;
+    background-position: 97%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 61px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.chanel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 10px;
+    gap: 10px;
+    width: 20%;
+    height: 61px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid #2A3647;
+    background-color: white;
+}
+
+.chanel:hover {
+    border: 3px solid #29ABE2;
+}
+
+.create {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 10px;
+    gap: 10px;
+    width: 40%;
+    height: 61px;
+    background: #2A3647;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.create:hover {
+    background-color: #29ABE2;
+    border: 0;
+}
+
+/***************************************************/
+/*********       OverlayEditContact     ************/
+/***************************************************/
+
+.overlayEditContact {
+    position: relative;
+    max-width: 1000px;
+    height: 500px;
+    background: #FFFFFF;
+    border-radius: 30px;
+    top: -20%;
+    z-index: 3;
+    transform: translateX(220%);
+    transition: transform 1s;
+    left: 6%;
+}
+
+.overlayEditContact.show {
+    transform: translateX(0);
+}
+
+.autoLayoutEdit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 66px 40px;
+    gap: 20px;
+    isolation: isolate;
+    position: absolute;
+    width: 315px;
+    height: 370px;
+    left: 0px;
+    top: 0px;
+    background: #2A3647;
+    border-radius: 30px 0 0 30px;
+}
+
+.logoEdit {
+    z-index: 3;
+    height: 50px;
+}
+
+.overlayTextEdit {
+    width: 366px;
+    font-weight: 700;
+    font-size: 51px;
+    color: #FFFFFF;
+}
+
+.overlayborderEdit {
+    height: 90px;
+    border: 1.5px solid #29ABE2;
+    transform: rotate(90deg);
+    margin-left: 47px;
+    margin-top: -70px;
+}
+
+.logoOverlayEdit {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px white solid;
+    top: 50%;
+    transform: translate(0, -50%);
+    background: #D1D1D1;
+    border-radius: 100%;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.1);
+}
+
+.initialsOverlay {
+    font-size: 35px;
+    color: white;
+}
+
+.inputContainerEdit {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    height: 271px;
+    top: 100px;
+    right: 5%;
+    left: 60%;
+}
+
+.closeOverlayEdit {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+form {
+    width: 100%;
+}
+
+.overlayInputName {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 13px 21px;
+    gap: 10px;
+    width: 100%;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    margin-bottom: 49px;
+    font-size: 20px;
+}
+
+.overlayInputName[type="text"] {
+    background: url(/img/VectorinputName.png) no-repeat;
+    background-position: 97%;
+}
+
+.overlayInputMail {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 13px 21px;
+    gap: 10px;
+    width: 100%;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    margin-bottom: 49px;
+    font-size: 20px;
+}
+
+.overlayInputMail[type="email"] {
+    background: url(/img/VectorinputMail.png) no-repeat;
+    background-position: 97%;
+}
+
+.overlayInputPhone {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 13px 21px;
+    gap: 10px;
+    width: 100%;
+    height: 51px;
+    background: #FFFFFF;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.overlayInputPhone[type="tel"] {
+    background: url(/img/VectorinputPhone.png) no-repeat;
+    background-position: 97%;
+}
+
+.editContactSave {
+    position: absolute;
+    right: 50px;
+    bottom: 20px;
+    padding: 0 30px !important;
+}

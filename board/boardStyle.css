@@ -1,0 +1,553 @@
+.d-none {
+    display: none !important;
+}
+
+.overflow-none {
+    overflow: hidden !important;
+}
+
+.body {
+    margin: 90px 0 0 272px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+}
+
+.headline {
+    width: 176px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 120%;
+    color: #000000;
+}
+
+.topContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px;
+    margin-left: 110px;
+}
+
+.taskSearchAdd {
+    display: flex;
+}
+
+.taskSearchAdd button {
+    min-width: fit-content;
+    z-index: 90;
+    margin-left: 16px;
+}
+
+#FsTask .buttonGlobal1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+}
+
+.buttonPosition {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* search */
+
+.search {
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgrey;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.search input {
+    box-sizing: border-box;
+
+    /* Auto layout */
+    padding: 13px 21px;
+    border-radius: 16px;
+    width: 200px;
+    height: 51px;
+
+    background: #FFFFFF;
+    /* icon */
+    outline: none;
+    border: none;
+}
+
+.search img {
+    height: 25px;
+    width: 25px;
+}
+
+.search img:last-child {
+    padding-right: 16px;
+}
+
+
+/* progress */
+.progressFields {
+    font-size: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    padding: 24px;
+}
+
+.progressHeaderImg {
+    height: 30px;
+    width: 30px;
+    transition: 125ms;
+    background: url("../img/plusButtonBorder.svg");
+}
+
+.progressHeaderImg:hover {
+    background-image: url("../img/plusButtonBorderHover.svg");
+    transition: 125ms;
+}
+
+.progressHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.progressHeader p {
+    margin: 0;
+    font-weight: bold;
+    color: #2A3647;
+}
+
+/* todo */
+
+.taskFields {
+    display: flex;
+}
+
+.taskField {
+    margin-top: 16px;
+    min-height: 200px;
+    height: 100%;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bg-hover {
+    border: 2px grey dashed;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.todoBox {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 125ms;
+    margin: 10px 0;
+    width: 250px;
+    position: relative;
+}
+
+.trash {
+    background-image: url("../img/delete-48 (1).png");
+    transition: all 125ms;
+    background-position: center;
+    background-size: contain;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+}
+
+.trash:hover {
+    background-image: url("../img/delete-48 (2).png");
+    transition: all 125ms;
+}
+
+.drag {
+    background-image: url("../img/dndBlue.svg");
+    transition: all 125ms;
+    background-position: center;
+    background-size: contain;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 12px;
+    right: 50px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.dragEdit {
+    background-image: url("../img/dndBlue.svg");
+    transition: all 125ms;
+    background-position: center;
+    background-size: contain;
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.drag:hover, .dragEdit:hover {
+    background-image: url("../img/dndLightBlue.svg");
+}
+
+.dragLinks {
+    padding: 10px;
+}
+
+.dragLinks h4{
+    margin: 0 0 5px 0 !important;
+}
+
+.dragLink {
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.dragLink:hover {
+    background-color: #2a3647dc;
+    color: white;
+    cursor: pointer;
+}
+
+.moveDiv {
+    border-radius: 10px;
+    border: 1px solid #2a36476b;
+    background-color: #29aae223;
+    height: 157px;
+    cursor: default;
+}
+
+.todoBox::after {
+    height: 50px;
+    width: 100px;
+    background-color: #000000;
+}
+
+.todoBox:hover {
+    transform: rotate(2deg);
+    transition: 125ms;
+}
+
+.todoBox h4 {
+    margin: 10px 0;
+}
+
+.todoBox p {
+    margin: 0;
+}
+
+.tilt {
+    transform: rotate(2deg);
+}
+
+.category {
+    margin: 0;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+    background-color: coral;
+    padding: 5px 15px;
+    width: fit-content;
+}
+
+.taskDescription {
+    margin-bottom: 5px;
+}
+
+/*subtask*/
+
+.subtaskTrack {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subtaskBar {
+    height: 5px;
+    width: 50%;
+    border-radius: 10px;
+    background-color: rgb(233, 233, 233);
+}
+
+.subtaskProgress {
+    height: 5px;
+    background-color: #29ABE2;
+    border-radius: 10px;
+}
+
+/*contact bubble */
+
+.contactPrio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.assigned {
+    display: flex;
+}
+
+.prioIcon {
+    height: 15px;
+    width: 15px;
+    object-fit: contain;
+}
+
+.contactBubble {
+    background-color: darkred;
+    color: white;
+    font-size: 12px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -10px;
+}
+
+.contactBubble:first-child {
+    margin-left: 0 !important;
+}
+
+/* task fullscreen */
+.task {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 300px;
+    padding: 48px;
+    border-radius: 20px;
+    z-index: 100;
+    max-height: calc(90vh - 96px);
+    overflow-y: scroll;
+}
+
+.task h1 {
+    font-size: 45px;
+    font-weight: bolder;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.task p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.task h4 {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.task input,
+.task textarea {
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 10px;
+    width: calc(100% - 22px);
+    outline: 0;
+}
+
+.FsTopBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.FsTopBar div {
+    padding: 5px 20px;
+    border-radius: 7px;
+    font-size: 20px;
+    color: white;
+}
+
+.FsTopBar img {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.FsTitle {
+    color: #2a3647;
+    font-size: 20px;
+}
+
+.FsDescription p {
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.FsDate {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.marginLeft {
+    margin: 0 0 0 15px;
+}
+
+.FsDate h4 {
+    margin: 0;
+}
+
+.FsDate div {
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+}
+
+.FsPrio img {
+    height: 15px;
+    width: 15px;
+    margin-left: 5px;
+}
+
+.FsPrio {
+    display: flex;
+    align-items: center;
+}
+
+.assignedContact {
+    display: flex;
+    align-items: center;
+}
+
+.assignedContact p {
+    margin: 5px 15px;
+}
+
+.FsAssigned h4 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.FsAssigned {
+    margin-bottom: 10px;
+}
+
+.prioBtnEdit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.prioBtnEdit div {
+    margin: 0 !important;
+}
+
+#assignedContactsEdit {
+    display: flex;
+    margin-top: 10px;
+}
+
+
+.subtaskFs {
+    color: black !important;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.FsSubtasks h4 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.tickBox {
+    border: 1px solid black;
+    min-height: 20px;
+    min-width: 20px;
+    max-height: 20px;
+    max-width: 20px;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width: 1000px) {
+
+    .body {
+        margin: 100px 0 100px 0;
+    }
+
+    .headline {
+        margin: 35px;
+    }
+
+    .topContent {
+        justify-content: space-evenly;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+@media(max-width: 374px) {
+    .task {
+        padding: 24px;
+    }
+
+    .FsEdit {
+        right: 24px;
+        bottom: 24px;
+    }
+}
+
+@media(max-width: 680px) {
+
+    .topContent {
+        flex-direction: column;
+    }
+
+    .taskSearchAdd button {
+        position: fixed;
+        bottom: 120px;
+        right: 20px;
+    }
+
+    .taskField {
+        min-height: 50px;
+    }
+
+    .task {
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+}
